@@ -6,7 +6,7 @@ This extension can be found in the [Gnome Extension Site](https://extensions.gno
 
 ## Usage
 
-After installing the extension you can do basic management of your docker containers by pressing the Docker icon in the Gnome Shell top bar.
+After installing the extension you can perform basic actions of your docker containers by pressing the Docker icon in the Gnome Shell top bar.
 
 The following actions are available :
 
