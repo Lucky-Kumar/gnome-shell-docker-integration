@@ -19,33 +19,38 @@
 
 'use strict'
 
+const PopupMenu = imports.ui.popupMenu
 const Main = imports.ui.main
 const ExtensionUtils = imports.misc.extensionUtils
 const Me = ExtensionUtils.getCurrentExtension()
-const { DockerMenu } = Me.imports.src.DockerMenu
+const Docker = Me.imports.src.docker
 
-// Triggered when extension has been initialized
-function init() {
-  log(`initializing ${Me.metadata.name} version ${Me.metadata.version}`)
-}
+// Docker actions for each container
+var DockerMenuItem = class DockerMenuItem extends PopupMenu.PopupMenuItem {
+  constructor(containerName, dockerCommand) {
+    super(Docker.dockerCommandsToLabels[dockerCommand])
 
-var indicator
+    this.containerName = containerName
+    this.dockerCommand = dockerCommand
 
-// Triggered when extension is enabled
-function enable() {
-  log('DOCKER INTEGRATION enable()')
+    this.connect('activate', this._dockerAction.bind(this))
+  }
 
-  log(`enabling ${Me.metadata.name} version ${Me.metadata.version}`)
-
-  indicator = new DockerMenu()
-  Main.panel.addToStatusArea(`${Me.metadata.name} docker-menu`, indicator)
-}
-
-// Triggered when extension is disabled
-function disable() {
-  log(`disabling ${Me.metadata.name} version ${Me.metadata.version}`)
-  if (indicator !== null) {
-    indicator.destroy()
-    indicator = null
+  _dockerAction() {
+    Docker.runCommand(this.dockerCommand, this.containerName, res => {
+      if (!!res) {
+        log('`' + this.dockerCommand + '` terminated successfully')
+      } else {
+        let errMsg = _(
+          "Docker: Failed to '" +
+            this.dockerCommand +
+            "' container '" +
+            this.containerName +
+            "'"
+        )
+        Main.notify(errMsg)
+        log(errMsg)
+      }
+    })
   }
 }

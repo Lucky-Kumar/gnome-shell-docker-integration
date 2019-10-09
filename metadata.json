@@ -1,19 +1,10 @@
 {
-  "uuid": "docker_status@gpouilloux",
+  "uuid": "docker_integration_fr@faustor21.github.com",
   "shell-version": [
-    "3.14",
-    "3.16",
-    "3.18",
-    "3.20",
-    "3.21",
-    "3.22",
-    "3.24",
-    "3.26",
-    "3.28",
-    "3.30",
     "3.32"
   ],
-  "description": "A status menu for managing docker containers.",
-  "name": "Docker Integration",
-  "url": "https://github.com/gpouilloux/gnome-shell-extension-docker"
+  "version": 0.1,
+  "description": "A Gnome Shell Extension to perform some basic docker containers management.",
+  "name": "Docker Integration FR",
+  "url": "https://github.com/faustor21/gnome-shell-docker-integration"
 }

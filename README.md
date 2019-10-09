@@ -1,8 +1,12 @@
-# Gnome Shell extension for Docker
+# Gnome Shell extension for Basic Management of Docker Containers
+
+## Installation
+
+This extension can be found in the [Gnome Extension Site](https://extensions.gnome.org/)
 
 ## Usage
 
-When installing this extension, you will be able to manage your docker containers.
+After installing the extension you can do basic management of your docker containers by pressing the Docker icon in the Gnome Shell top bar.
 
 The following actions are available :
 
@@ -11,17 +15,13 @@ The following actions are available :
 - Stop
 - Remove
 
-## Screenshot
+## Take a look (Screenshot)
 
 ![Screenshot](screenshot.jpg)
 
-## Installation
-
-You can install this extension by following this [link](https://extensions.gnome.org/extension/1065/docker-status/).
-
 ## Contribution
 
-Please feel free to contribute by sending pull requests or raising issues.
+You can contribute by sending pull requests or raising issues.
 
 ## License
 
@@ -29,4 +29,6 @@ Licensed under the GNU General Public License Version 2. See COPYING for details
 
 ## Authors
 
-- gpouilloux (Guillaume Pouilloux)
+- Fausto Ramírez (faustor21)
+
+Note: This is a fork of the [gpouilloux (Guillaume Pouilloux)](https://github.com/gpouilloux/gnome-shell-extension-docker) Gnome Docker Extension.

@@ -1,0 +1,5 @@
+*.git*
+validate-uuid.py
+extension.sample.js
+exclude.lst
+build.sh
