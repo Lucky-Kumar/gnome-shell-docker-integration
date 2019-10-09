@@ -2,7 +2,7 @@
 
 ## Installation
 
-This extension can be found in the [Gnome Extension Site](https://extensions.gnome.org/)
+This extension can be found in the [Gnome Extension Site](https://extensions.gnome.org/extension/2209/docker-integration-fr/)
 
 ## Usage
 
