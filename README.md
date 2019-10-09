@@ -17,7 +17,7 @@ The following actions are available :
 
 ## Take a look (Screenshot)
 
-![Screenshot](screenshot-screenshot-docker-ifr.png)
+![Screenshot](screenshot-docker-ifr.png)
 
 ## Contribution
 
