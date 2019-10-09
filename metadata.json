@@ -4,7 +4,7 @@
     "3.32"
   ],
   "version": 0.1,
-  "description": "A Gnome Shell Extension to perform some basic docker containers management.",
+  "description": "A Gnome Shell Extension to perform some basics Docker Containers actions",
   "name": "Docker Integration FR",
   "url": "https://github.com/faustor21/gnome-shell-docker-integration"
 }
